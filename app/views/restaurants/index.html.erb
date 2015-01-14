@@ -2,6 +2,19 @@
   <%= render "shared/page_header" %>
 </header>
 
+<div class="alert">
+  <% if @restaurants.count > 0 %>
+    <div class="alert-success">
+      <strong>Results Found: <%= @restaurants.count %> </strong>
+    </div>
+  <% else %>
+    <div class="alert-danger">
+      <strong>No Results Found</strong>
+    </div>
+  <% end %>
+</div>
+
+
 <table class="table">
   <thead>
     <tr>

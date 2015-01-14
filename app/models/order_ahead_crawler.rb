@@ -6,6 +6,10 @@ class OrderAheadCrawler
     new_search = OrderAheadProvider.new(@address_str)
     @stores = new_search.search_by_location
   end
+  def search_by_keywords words
+    new_search = OrderAheadProvider.new(@address_str)
+    @stores = new_search.search_by_keywords(words)
+  end
   def shortest_delivery_time(x)
     @stores.delete_if {|store| !store.accepting_orders?}
     sort_by_delivery

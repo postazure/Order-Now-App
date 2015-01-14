@@ -18,10 +18,10 @@ class OrderAheadProvider < SearchProvider
     find_by_name(restaurant_id)
   end
 
-  def search_by_keywords keywords_array, num_of_restaurants=300
+  def search_by_keywords keywords_str, num_of_restaurants=300
     search_prefix = "/api/v1.0.6/stores/search/?query="
     delivery_suffix = "&page=1&per=#{num_of_restaurants}&ext=&delivers_to=true&pickup_at=&open_now=&" + @lat_lon_query
-    search_term = keywords_array.gsub(" ", "+").downcase
+    search_term = keywords_str.gsub(" ", "+").downcase
 
     search_url = @host + search_prefix + search_term + delivery_suffix
     search_results = fetch_data(search_url)
