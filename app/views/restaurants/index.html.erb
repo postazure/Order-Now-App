@@ -1,33 +1,17 @@
+<header class="page-header">
+  <%= render "shared/page_header" %>
+</header>
+
 <table class="table">
   <thead>
     <tr>
-      <th colspan="2">
-        Name
-      </th>
-      <th>
-        Tags
-      </th>
-      <th>
-        Delivery Estimate
-      </th>
+      <th colspan="2">Name</th>
+      <th>Tags</th>
+      <th>Est. Time</th>
+      <th>Service</th>
     </tr>
   </thead>
-  <% @restaurants.each do |restaurant| %>
   <tbody>
-    <tr>
-      <td>
-        <img src=<%= restaurant.logo %> width="30px"/>
-      </td>
-      <td>
-        <%= link_to restaurant.name, restaurant.source_url %>
-      </td>
-      <td>
-        <%= restaurant.tags.join(" | ") %>
-      </td>
-      <td>
-        <%= restaurant.delivery_time_min %> - <%= restaurant.delivery_time_max %>
-      </td>
-    </tr>
+    <%= render "restaurant" %>
   </tbody>
-  <% end %>
 </table>
