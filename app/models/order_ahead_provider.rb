@@ -73,7 +73,7 @@ class OrderAheadProvider < SearchProvider
   end
 
   def accepting_orders data
-    (data["not_accepting_orders"] == false) && data["open_now?"]
+    data["orderable"] && data["open_now?"]
   end
 
   def tags data
