@@ -4,7 +4,7 @@
   <td><%= link_to restaurant.name, restaurant.source_url %></td>
   <td>
     <% restaurant.tags.each do |tag| %>
-    <span class="label label-default"><%= tag %></span>
+      <span class="label label-default"><%= tag %></span>
     <% end %>
   </td>
   <td><%= restaurant.delivery_time_min %> - <%= restaurant.delivery_time_max %>mins</td>
