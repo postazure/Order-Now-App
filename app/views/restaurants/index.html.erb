@@ -5,30 +5,16 @@
 
 <% if @restaurants.count == 0 %>
 <div class="alert alert-danger text-center">
-  <strong>Sorry. No Results Found. Try just one keyword.</strong>
+  <strong>Sorry. No Results Found. Try a different keyword.</strong>
+    <p>Reminder: Currently only available in San Francisco, CA.</p>
 </div>
 <% end %>
 
 <div class="row">
   <div class="col-md-3">
-    <div class="panel panel-success">
-      <div class="panel-heading text-center">Prepared Food Services</div>
-      <ul class="list-group">
-        <a href="https://www.spoonrocket.com/">
-          <li class="list-group-item" style="background-color: rgb(187,63,51);">
-            <img src="https://www.spoonrocket.com/images/header-logo-6293a726.png" alt="" />
-          </li>
-        </a>
-        <a href="https://munchery.com/">
-          <li class="list-group-item" style="background-color: rgb(255,255,255);">
-            <img src="https://assets2.munchery.com/assets/logo-04c8b7205146c15620d0e5bad4e33bd6.svg" height="41" alt="" />
-          </li>
-        </a>
-      </ul>
-    </div>
+    <%= render "prepared_food_services" %>
+    <%= render "restaurant_delivery_services" %>
   </div>
-
-
   <div class="col-md-9">
     <div class="panel panel-success">
       <div class="panel-heading">
