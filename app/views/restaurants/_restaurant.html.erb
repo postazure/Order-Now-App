@@ -1,7 +1,9 @@
 <% @restaurants.each do |restaurant| %>
 <tr>
-  <td><img src=<%= restaurant.logo %> width="30px"/></td>
-  <td><%= link_to restaurant.name, restaurant.source_url %></td>
+  <td>
+    <img src=<%= restaurant.logo %> width="30px"/>
+    <%= link_to restaurant.name, restaurant.source_url %>
+  </td>
   <td>
     <% restaurant.tags.each do |tag| %>
       <span class="label label-default"><%= tag %></span>
