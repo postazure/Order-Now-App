@@ -69,7 +69,7 @@ class OrderAheadProvider < SearchProvider
     #store_scaling_delivery_attributes[(minute_increment * mile_interval)] #after address class
     sum = data["default_prep_duration"].nil? ? 0 : data["default_prep_duration"]
     sum += data["delivery_prep_bump"].nil? ? 0 : data["delivery_prep_bump"]
-    sum += 20
+    # sum += 20
   end
 
   def accepting_orders data
